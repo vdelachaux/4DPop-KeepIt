@@ -1,0 +1,1 @@
+﻿For each ($Txt_property;<caret/>)		End for each

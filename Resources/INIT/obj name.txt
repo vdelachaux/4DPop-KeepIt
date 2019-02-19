@@ -1,0 +1,1 @@
+﻿$Txt_objectName:=OBJECT Get name(Object current)
