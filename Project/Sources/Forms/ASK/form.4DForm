@@ -1,0 +1,191 @@
+{
+	"destination": "detailScreen",
+	"windowSizingY": "fixed",
+	"windowMinWidth": 400,
+	"width": 400,
+	"height": 120,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onUnload",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Ligne3": {
+					"type": "line",
+					"top": 12,
+					"left": 380,
+					"width": 1,
+					"height": 69,
+					"visibility": "hidden",
+					"stroke": "#0000FF",
+					"strokeDashArray": "1 1",
+					"startPoint": "bottomLeft"
+				},
+				"Ligne2": {
+					"type": "line",
+					"top": 12,
+					"left": 99,
+					"width": 1,
+					"height": 69,
+					"visibility": "hidden",
+					"stroke": "#0000FF",
+					"strokeDashArray": "1 1",
+					"startPoint": "bottomLeft"
+				},
+				"Ligne1": {
+					"type": "line",
+					"top": 59,
+					"left": 78,
+					"width": 316,
+					"visibility": "hidden",
+					"stroke": "#0000FF",
+					"strokeDashArray": "1 1"
+				},
+				"Ligne": {
+					"type": "line",
+					"top": 40,
+					"left": 78,
+					"width": 316,
+					"visibility": "hidden",
+					"stroke": "#0000FF",
+					"strokeDashArray": "1 1"
+				},
+				"icon": {
+					"type": "picture",
+					"top": 8,
+					"left": 13,
+					"width": 64,
+					"height": 64,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/4DPop.png"
+				},
+				"b.escape": {
+					"type": "button",
+					"top": 81,
+					"left": 170,
+					"width": 99,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "Cancel",
+					"text": "Annuler",
+					"focusable": false
+				},
+				"b.ok": {
+					"type": "button",
+					"top": 81,
+					"left": 280,
+					"width": 99,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"action": "Accept",
+					"text": "OK",
+					"focusable": false,
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					]
+				},
+				"question": {
+					"type": "input",
+					"top": 16,
+					"left": 101,
+					"width": 278,
+					"height": 16,
+					"sizingX": "grow",
+					"dataSource": "Form:C1466.question",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"txt.box": {
+					"type": "input",
+					"top": 42,
+					"left": 101,
+					"width": 278,
+					"height": 16,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Form:C1466.result",
+					"entryFilter": "&\"a-z;A-Z;0-9; ;,;.;-\"",
+					"dragging": "none"
+				}
+			}
+		},
+		{
+			"objects": {
+				"list": {
+					"type": "dropdown",
+					"top": 40,
+					"left": 98,
+					"width": 283,
+					"height": 20,
+					"sizingX": "grow",
+					"dataSourceTypeHint": "integer",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Bouton": {
+					"type": "button",
+					"top": 138,
+					"left": 0,
+					"width": 84,
+					"height": 24,
+					"shortcutKey": "[down arrow]",
+					"style": "flat",
+					"text": "Down Arrow",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 9,
+					"stroke": "#FF6600",
+					"focusable": false,
+					"method": "ObjectMethods/Bouton.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "Vue 1",
+		"defaultView": "Vue 1",
+		"views": {
+			"Vue 1": {},
+			"Vue 2": {},
+			"Vue 3": {},
+			"Vue 4": {},
+			"Vue 5": {},
+			"Vue 6": {},
+			"Vue 7": {},
+			"Vue 8": {},
+			"Vue 9": {}
+		}
+	}
+}

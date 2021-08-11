@@ -1,0 +1,110 @@
+{
+	"_0_TEST": {
+		"methods": [
+			"00_RUN",
+			"000_test"
+		]
+	},
+	"_o_compatibility": {
+		"methods": [
+			"_o_tag_command",
+			"_o_tag_constant",
+			"_o_tag_keyword",
+			"COMPILER_Compatibility"
+		]
+	},
+	"_Public": {
+		"methods": [
+			"Hashtag_macro",
+			"Hashtag_tool",
+			"Keepit_MACRO",
+			"KeepIt_onDrop",
+			"KeepIt_tool"
+		]
+	},
+	"[HASHTAG]": {
+		"methods": [
+			"COMPILER_hashtag",
+			"hashtag_handler",
+			"hashtag_list",
+			"hashtag_parse",
+			"hashtag_pattern"
+		],
+		"forms": [
+			"HASHTAG"
+		]
+	},
+	"[KEEPIT]": {
+		"groups": [
+			"menu"
+		],
+		"methods": [
+			"keepit",
+			"keepit_ask",
+			"keepit_folder",
+			"keepit_get_file",
+			"keepit_indent",
+			"keepit_main",
+			"keepit_method",
+			"keepit_session",
+			"keepit_update"
+		],
+		"forms": [
+			"ASK",
+			"ask_template",
+			"KEEPIT"
+		]
+	},
+	"Component": {
+		"groups": [
+			"_Public",
+			"[HASHTAG]",
+			"[KEEPIT]"
+		],
+		"methods": [
+			"COMPILER_component",
+			"ON_HOST_DATABASE_EVENT"
+		]
+	},
+	"doc": {
+		"methods": [
+			"COMPILER_doc",
+			"doc_File",
+			"doc_Folder"
+		]
+	},
+	"lib": {
+		"groups": [
+			"doc",
+			"Regex"
+		]
+	},
+	"menu": {
+		"methods": [
+			"menu_COPY",
+			"menu_PAST"
+		]
+	},
+	"Regex": {
+		"methods": [
+			"Compiler_Rgx",
+			"Rgx_ExtractText",
+			"Rgx_Get_Pattern",
+			"Rgx_MatchText",
+			"rgx_NO_ERROR",
+			"rgx_Options",
+			"Rgx_SplitText",
+			"Rgx_SubstituteText"
+		]
+	},
+	"Tools": {
+		"methods": [
+			"COMPILER_tools",
+			"localizedControlFlow",
+			"methodGetName",
+			"noError",
+			"ptrTable"
+		]
+	},
+	"trash": {}
+}

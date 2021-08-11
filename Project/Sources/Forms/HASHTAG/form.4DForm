@@ -1,0 +1,159 @@
+{
+	"destination": "detailScreen",
+	"windowTitle": "Hashtags",
+	"width": 300,
+	"height": 520,
+	"events": [
+		"onLoad",
+		"onOutsideCall",
+		"onTimer"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"hastags": {
+					"type": "listbox",
+					"top": 30,
+					"left": 0,
+					"width": 300,
+					"height": 490,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"hideFocusRing": true,
+					"movableRows": false,
+					"rowHeight": "20px",
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"staticColumnCount": 1,
+					"selectionMode": "none",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"borderStyle": "none",
+					"columns": [
+						{
+							"name": "hashtag",
+							"dataSource": [
+								""
+							],
+							"width": 18,
+							"minWidth": 18,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "#00B4FF",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"fontWeight": "bold",
+							"header": {
+								"name": "Header1",
+								"text": "Header1",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer1",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "path",
+							"width": 267,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"resizable": false,
+							"enterable": false,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onDoubleClick"
+							],
+							"method": "ObjectMethods/path.4dm",
+							"header": {
+								"name": "Header2",
+								"text": "Header2",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer2",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						}
+					]
+				},
+				"Line": {
+					"type": "line",
+					"top": 29,
+					"left": 0,
+					"width": 300,
+					"sizingX": "grow",
+					"stroke": "#AAAAAA"
+				},
+				"loading": {
+					"type": "picture",
+					"top": 140,
+					"left": 134,
+					"width": 32,
+					"height": 32,
+					"visibility": "hidden",
+					"sizingX": "move",
+					"pictureFormat": "scaled",
+					"picture": "Images/loading.gif"
+				},
+				"Button": {
+					"type": "button",
+					"top": 5,
+					"left": 11,
+					"width": 72,
+					"height": 21,
+					"fontFamily": "System Font Regular",
+					"fontSize": 9,
+					"focusable": false,
+					"text": "Refresh",
+					"iconFrames": 4,
+					"style": "bevel",
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

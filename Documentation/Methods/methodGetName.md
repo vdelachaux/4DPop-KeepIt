@@ -1,0 +1,1 @@
+buffer := methodGetName ( frontmost )   -> frontmost (Boolean)   <- buffer (Text)  ________________________________________________________  

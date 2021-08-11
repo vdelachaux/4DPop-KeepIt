@@ -1,0 +1,219 @@
+{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"formSizeAnchor": "b.OK",
+	"rightMargin": 10,
+	"bottomMargin": 10,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"icon": {
+					"type": "picture",
+					"top": 8,
+					"left": 13,
+					"width": 64,
+					"height": 64,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/4DPop.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Texte": {
+					"type": "text",
+					"top": 21,
+					"left": 20,
+					"width": 144,
+					"height": 13,
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": ":xliff:Ask_message"
+				},
+				"request": {
+					"type": "input",
+					"top": 21,
+					"left": 174,
+					"width": 165,
+					"height": 39,
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Texte1": {
+					"type": "text",
+					"top": 83,
+					"left": 20,
+					"width": 144,
+					"height": 13,
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": ":xliff:Ask_typeOfTheResponse"
+				},
+				"type": {
+					"type": "dropdown",
+					"top": 80,
+					"left": 174,
+					"width": 167,
+					"height": 19,
+					"choiceList": [
+						":xliff:Typ_text",
+						":xliff:Typ_integer",
+						":xliff:Typ_real",
+						":xliff:Typ_table",
+						":xliff:Typ_champ",
+						":xliff:Typ_user",
+						":xliff:Typ_group",
+						":xliff:Typ_choiceList",
+						"-",
+						":xliff:Typ_previousAnswer"
+					],
+					"method": "ObjectMethods/type.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"opt.value.list": {
+					"type": "input",
+					"top": 116,
+					"left": 174,
+					"width": 165,
+					"height": 65,
+					"visibility": "hidden",
+					"textAlign": "left",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"b.escape": {
+					"type": "button",
+					"top": 116,
+					"left": 174,
+					"width": 73,
+					"height": 14,
+					"action": "cancel",
+					"shortcutKey": "[Esc]",
+					"text": ":xliff:Ask_cancel",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"b.OK": {
+					"type": "button",
+					"top": 116,
+					"left": 267,
+					"width": 73,
+					"height": 14,
+					"text": ":xliff:Ask_ok",
+					"focusable": false,
+					"defaultButton": true,
+					"method": "ObjectMethods/b.OK.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"opt.value.label": {
+					"type": "text",
+					"top": 116,
+					"left": 13,
+					"width": 151,
+					"height": 39,
+					"visibility": "hidden",
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": ":xliff:Ask_values"
+				},
+				"opt.result.value": {
+					"type": "input",
+					"top": 116,
+					"left": 174,
+					"width": 36,
+					"height": 13,
+					"visibility": "hidden",
+					"dataSourceTypeHint": "number",
+					"textAlign": "left",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"entryFilter": "&9",
+					"dragging": "none"
+				},
+				"opt.result.label": {
+					"type": "text",
+					"top": 116,
+					"left": 13,
+					"width": 151,
+					"height": 13,
+					"visibility": "hidden",
+					"textAlign": "right",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"text": ":xliff:Ask_index"
+				},
+				"tmpl.opt.value": {
+					"type": "rectangle",
+					"top": 116,
+					"left": 373,
+					"width": 10,
+					"height": 65,
+					"visibility": "hidden",
+					"fill": "#FFFF00",
+					"stroke": "#FF6600"
+				},
+				"tmpl.opt.result": {
+					"type": "rectangle",
+					"top": 116,
+					"left": 360,
+					"width": 10,
+					"height": 14,
+					"visibility": "hidden",
+					"fill": "#FFFF00",
+					"stroke": "#FF6600"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "Vue 1",
+		"defaultView": "Vue 1",
+		"views": {
+			"Vue 1": {},
+			"Vue 2": {},
+			"Vue 3": {},
+			"Vue 4": {},
+			"Vue 5": {},
+			"Vue 6": {},
+			"Vue 7": {},
+			"Vue 8": {},
+			"Vue 9": {}
+		}
+	}
+}

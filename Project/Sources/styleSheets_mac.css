@@ -1,0 +1,32 @@
+.code {
+	font-family: Menlo Regular;
+	font-size: 12px;
+}
+
+.default {
+	font-family: Lucida Grande;
+	font-size: 13px;
+}
+
+.header\.button {
+	font-family: Lucida Grande;
+	font-size: 12px;
+}
+
+.list {
+	font-family: Lucida Grande;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.system {
+	font-family: Lucida Grande;
+	font-size: 9px;
+}
+
+.title {
+	font-family: Lucida Grande;
+	font-size: 20px;
+	font-weight: bold;
+}
+

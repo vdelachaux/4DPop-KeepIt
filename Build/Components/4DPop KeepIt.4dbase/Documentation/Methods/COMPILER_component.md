@@ -1,0 +1,1 @@
+COMPILER_component ( doInit )   -> doInit (Boolean)  ________________________________________________________  

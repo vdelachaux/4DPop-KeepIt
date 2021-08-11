@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="24">
+	<com.4d>
+		<compiler>
+			<options compilation_path="3" fat_binary="true" symbol_file="false" target="all"/>
+			<method_suffix arrays="" interprocess_arrays="" interprocess_variables="" methods="" variables=""/>
+			<typage default_for_button="2"/>                                                                                                                                                    </compiler>
+		<server>
+			<ip_config>
+				<allow_deny_table/>                                              </ip_config>
+			<network>
+				<options use_legacy_network_layer="false"/>
+			</network>                                  </server>
+		<web>
+			<standalone_server>
+				<log tokens=""/>
+				<configuration allow_ssl="false" automatic_session_management="true" session_mode="2"/>
+				<rest launch_at_startup="true"/>
+				<misc/>
+				<options>
+					<cache use_4d_web_cache="false"/>
+				</options>                                              </standalone_server>
+			<remote>
+				<configuration allow_ssl="false" automatic_session_management="true" session_mode="2"/>
+				<misc/>
+				<options>
+					<cache use_4d_web_cache="false"/>
+				</options>
+			</remote>                                  </web>
+		<interface>
+			<shortcuts>
+				<accept_input_form alt="false" command="false" ctrl="false" key_code="0" shift="false"/>
+				<cancel_input_form alt="false" command="false" ctrl="false" key_code="0" shift="false"/>
+				<add_subform alt="false" command="false" ctrl="false" key_code="0" shift="false"/>                                                                                                      </shortcuts>
+			<user print_progress="false"/>                            </interface>
+		<database>
+			<cache size_fixed="32" size_maximum="100" size_reserved="128"/>
+			<misc standard_xpath="false"/>
+		</database>
+		<general allow_user_settings="false" execute_host_database_event="true"/>
+		<deployment>
+			<options/>
+		</deployment>                                                                                          </com.4d>                </preferences>

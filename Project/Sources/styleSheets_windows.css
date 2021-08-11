@@ -1,0 +1,32 @@
+.code {
+	font-family: System Font;
+	font-size: 12px;
+}
+
+.default {
+	font-family: Segoe UI;
+	font-size: 12px;
+}
+
+.header\.button {
+	font-family: Segoe UI;
+	font-size: 12px;
+}
+
+.list {
+	font-family: Segoe UI;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.system {
+	font-family: Segoe UI;
+	font-size: 9px;
+}
+
+.title {
+	font-family: Segoe UI;
+	font-size: 20px;
+	font-weight: bold;
+}
+

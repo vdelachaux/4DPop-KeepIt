@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="4DPop KeepIt" uuid="D9A60496BBF249DDB57CBA895AC23301" collation_locale="fr">
+	<schema name="DEFAULT_SCHEMA"/>
+	<base_extra package_name="4DPop KeepIt" structure_file_name="4DPop KeepIt" data_file_path=":Data:4DPop KeepIt.4DD" __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0">
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>

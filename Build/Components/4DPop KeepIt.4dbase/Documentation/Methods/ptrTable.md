@@ -1,0 +1,1 @@
+table := ptrTable ( table )   -> table (Text)   <- table (Pointer)  ________________________________________________________  

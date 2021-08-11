@@ -1,0 +1,1 @@
+buffer := Rgx_Get_Pattern ( patternName ; Path ; Param_3 )   -> patternName (Text)   -> Path (Text)   -> Param_3 (Pointer)   <- buffer (Text)  ________________________________________________________  
