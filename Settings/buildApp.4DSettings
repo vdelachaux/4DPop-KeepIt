@@ -21,10 +21,11 @@
       <BuildCSUpgradeable>False</BuildCSUpgradeable>
       <BuildV13ClientUpgrades>False</BuildV13ClientUpgrades>
       <CurrentVers>1</CurrentVers>
-      <HardLink></HardLink>
+      <HardLink/>
     </CS>
     <BuildApplicationName>4DPop KeepIt</BuildApplicationName>
     <BuildMacDestFolder>::Build:</BuildMacDestFolder>
+    <BuildWinDestFolder>..\Build/</BuildWinDestFolder>
     <ArrayExcludedPluginName>
       <ItemsCount>0</ItemsCount>
     </ArrayExcludedPluginName>
@@ -41,7 +42,7 @@
     </Licenses>
     <SignApplication>
       <MacSignature>False</MacSignature>
-      <MacCertificate></MacCertificate>
+      <MacCertificate/>
     </SignApplication>
   </BuildApp>
 </Preferences4D>
