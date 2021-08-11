@@ -1,4 +1,4 @@
-Logs
+﻿Logs
 P4CONFIG
 4DPop KeepIt.4DD
 4DPop KeepIt.4DIndx
@@ -6,3 +6,5 @@ SOURCES/4DPop KeepIt.zip
 Resources/php.ini
 Preferences/4DPop
 Preferences/Backup/Backup.xml
+
+Settings/
