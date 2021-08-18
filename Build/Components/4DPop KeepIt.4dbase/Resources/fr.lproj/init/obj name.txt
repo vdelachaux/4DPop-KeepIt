@@ -1,1 +1,1 @@
-$Txt_objectName:=OBJET Lire nom(Objet courant)
+$Txt_objectName:=OBJET Lire nom(Objet courant)

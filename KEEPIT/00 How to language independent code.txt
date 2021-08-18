@@ -1,1 +1,22 @@
-﻿%attributes = {"lang":"us"}/*Example of language independent code.The pasted text in the method editor willbe correctly interpreted with a 4D US or FRTo do that select"Tokenize"in the Actions' menu*/$Ptr:=OBJECT Get pointer:C1124(Object named:K67:5;$1)If (Length:C16($Ptr->)>0)		ST GET ATTRIBUTES:C1094(*;$1;1;2;Attribute text size:K65:6;$size)	$Styled:=(OK=1)	Else		$Styled:=(ST Get text:C1116(*;$1)=ST Get plain text:C1092(*;$1))	End if
+%attributes = {"lang":"us"}
+/*Example of language independent code.
+
+The pasted text in the method editor will
+be correctly interpreted with a 4D US or FR
+
+To do that select"Tokenize"in the Actions' menu
+*/
+
+$Ptr:=OBJECT Get pointer:C1124(Object named:K67:5;$1)
+
+If (Length:C16($Ptr->)>0)
+	
+	ST GET ATTRIBUTES:C1094(*;$1;1;2;Attribute text size:K65:6;$size)
+	$Styled:=(OK=1)
+	
+Else
+	
+	$Styled:=(ST Get text:C1116(*;$1)=ST Get plain text:C1092(*;$1))
+	
+End if
+

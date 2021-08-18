@@ -1,1 +1,0 @@
-folder := doc_Folder ( pathname )   -> pathname (Text)   <- folder (Object)  ________________________________________________________  

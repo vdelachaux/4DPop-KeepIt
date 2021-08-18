@@ -1,1 +1,0 @@
-Text := keepit_ask ( question ; type )   -> question (Text)   -> type (Text)  ________________________________________________________  

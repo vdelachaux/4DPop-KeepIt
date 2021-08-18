@@ -148,31 +148,34 @@ Case of
 	: ($Obj_form.event=On Mouse Move:K2:35)
 		
 		// Display tips
-		GET MOUSE:C468($Lon_x; $Lon_y; $Lon_)
-		$Obj_infos:=LISTBOX Get info at:C1569(*; $Obj_form.current; $Lon_x; $Lon_y)
-		
-		If ($Obj_infos.element#Null:C1517)
+		If (Parse formula:C1576(":C1569")#":C1569")
 			
-			$Txt_tips:=String:C10($Obj_infos.element.code)
+			GET MOUSE:C468($Lon_x; $Lon_y; $Lon_)
+			EXECUTE FORMULA:C63("$Obj_infos:=:C1569(*; $Obj_form.current; $Lon_x; $Lon_y)")
 			
-			ARRAY TEXT:C222($tTxt_extracted; 0x0000)
-			
-			If (Rgx_ExtractText("/\\*([^\\*]*)\\*/"; $Txt_tips; "1"; ->$tTxt_extracted)=0)
+			If ($Obj_infos.element#Null:C1517)
 				
-				// First comment as tip
-				$Txt_tips:=$tTxt_extracted{1}
+				$Txt_tips:=String:C10($Obj_infos.element.code)
 				
-			Else 
+				ARRAY TEXT:C222($tTxt_extracted; 0x0000)
 				
-				// Display the item's content without the attribute line
-				$Col_code:=Split string:C1554($Txt_tips; "\r")
-				
-				If ($Col_code.length>0)
+				If (Rgx_ExtractText("/\\*([^\\*]*)\\*/"; $Txt_tips; "1"; ->$tTxt_extracted)=0)
 					
-					If ($Col_code[0]="%attributes = @")
+					// First comment as tip
+					$Txt_tips:=$tTxt_extracted{1}
+					
+				Else 
+					
+					// Display the item's content without the attribute line
+					$Col_code:=Split string:C1554($Txt_tips; "\r")
+					
+					If ($Col_code.length>0)
 						
-						$Txt_tips:=$Col_code.remove(0).join("\r")
-						
+						If ($Col_code[0]="%attributes = @")
+							
+							$Txt_tips:=$Col_code.remove(0).join("\r")
+							
+						End if 
 					End if 
 				End if 
 			End if 

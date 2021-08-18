@@ -1,1 +1,0 @@
-snippetFolder := keepit_folder   <- snippetFolder (Text)  ________________________________________________________  

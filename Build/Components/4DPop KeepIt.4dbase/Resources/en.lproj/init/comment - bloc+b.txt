@@ -1,1 +1,5 @@
-if (True)    //<caret/> {<selection/>End if     //}
+if (True)    //<caret/> {
+
+<selection/>
+
+End if     //}

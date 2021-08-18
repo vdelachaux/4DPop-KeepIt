@@ -1,4 +1,4 @@
-﻿# Ignore invisible files/folders except me
+# Ignore invisible files/folders except me
 .*
 !.gitignore
 
@@ -36,3 +36,4 @@ Resources/fr to en.xml
 Resources/en.xml
 Resources/fr.xml
 Plugins (inactivated)
+Libraries/lib4d-arm64.dylib

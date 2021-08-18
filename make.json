@@ -1,0 +1,17 @@
+{
+  "components": [
+    "4DPop"
+  ],
+  "postBuild": {
+    "buildNumber": true, 
+    "owner": "VDL", 
+    "InfoPlist": true, 
+    "remove": [
+      "Build/",
+      "Data/",
+      "Resources/php.ini",
+      "Resources/test_file.txt",
+      "_config.yml"
+    ]
+  }
+}

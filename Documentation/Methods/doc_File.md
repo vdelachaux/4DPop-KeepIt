@@ -1,1 +1,0 @@
-file := doc_File ( pathname )   -> pathname (Text)   <- file (Object)  ________________________________________________________  

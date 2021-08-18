@@ -1,1 +1,5 @@
-Si (Vrai)    //<caret/> {<selection/>Fin de si     //}
+Si (Vrai)    //<caret/> {
+
+<selection/>
+
+Fin de si     //}

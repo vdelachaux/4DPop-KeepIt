@@ -1,1 +1,165 @@
-﻿%attributes = {"lang":"us"}   If (Length:C16($Txt_code)>0)      $Col_lines:=Split string:C1554($Txt_code;"\r";sk trim spaces:K86:2)      CLEAR VARIABLE:C89($Txt_code)      $Obj_flow:=New object:C1471(\      "value";"";\      "level";0;\      "indent";0)      For each ($Txt_line;$Col_lines)         $Txt_line:=Replace string:C233($Txt_line;"\t";"")         Case of               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{2};$Txt_line;1))  // Else            $Obj_flow.value:=$tTxt_controlFlow{2}            $Obj_flow.indent:=$Obj_flow.level-1               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{1}+"\\W";$Txt_line;1))  // If            $Obj_flow.value:=$tTxt_controlFlow{1}            $Obj_flow.indent:=$Obj_flow.level            $Obj_flow.level:=$Obj_flow.level+1               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{4}+"\\W*";$Txt_line;1))  // Case of            $Obj_flow.value:=$tTxt_controlFlow{4}            $Obj_flow.indent:=$Obj_flow.level            $Obj_flow.level:=$Obj_flow.level+1               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{14}+"\\W";$Txt_line;1))  // For each            $Obj_flow.value:=$tTxt_controlFlow{14}            $Obj_flow.indent:=$Obj_flow.level            $Obj_flow.level:=$Obj_flow.level+1               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{8}+"\\W";$Txt_line;1))  // For            $Obj_flow.value:=$tTxt_controlFlow{8}            $Obj_flow.indent:=$Obj_flow.level            $Obj_flow.level:=$Obj_flow.level+1               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{6}+"\\W";$Txt_line;1))  // While            $Obj_flow.value:=$tTxt_controlFlow{6}            $Obj_flow.indent:=$Obj_flow.level            $Obj_flow.level:=$Obj_flow.level+1               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{10}+"\\W";$Txt_line;1))  // Repeat            $Obj_flow.value:=$tTxt_controlFlow{10}            $Obj_flow.indent:=$Obj_flow.level            $Obj_flow.level:=$Obj_flow.level+1               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+Command name:C538(948);$Txt_line;1))  // Begin SQL            $Obj_flow.value:=Command name:C538(948)            $Obj_flow.indent:=$Obj_flow.level            $Obj_flow.level:=$Obj_flow.level+1               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{12}+"\\W";$Txt_line;1))  // Use            $Obj_flow.value:=$tTxt_controlFlow{12}            $Obj_flow.indent:=$Obj_flow.level            $Obj_flow.level:=$Obj_flow.level+1               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{3};$Txt_line;1))  // End if            $Obj_flow.value:=$tTxt_controlFlow{3}            $Obj_flow.level:=$Obj_flow.level-1            $Obj_flow.indent:=$Obj_flow.level               //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{5};$Txt_line;1))  // End case               If (Asserted:C1132($Lon_parameters>=1;"Missing parameter"))                  $Txt_code:=$1                  ARRAY TEXT:C222($tTxt_controlFlow;0x0000)                  localizedControlFlow ("";->$tTxt_controlFlow)                  $kTxt_tab:=Char:C90(Space:K15:42)*3               Else                  ABORT:C156               End if                  //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{15};$Txt_line;1))  // End for each               $Obj_flow.value:=$tTxt_controlFlow{15}               $Obj_flow.level:=$Obj_flow.level-1               $Obj_flow.indent:=$Obj_flow.level                  //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{9};$Txt_line;1))  // End for               $Obj_flow.value:=$tTxt_controlFlow{9}               $Obj_flow.level:=$Obj_flow.level-1               $Obj_flow.indent:=$Obj_flow.level                  //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{7};$Txt_line;1))  // End while               $Obj_flow.value:=$tTxt_controlFlow{7}               $Obj_flow.level:=$Obj_flow.level-1               $Obj_flow.indent:=$Obj_flow.level                  //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{11}+"\\W";$Txt_line;1))  // Until               $Obj_flow.value:=$tTxt_controlFlow{11}               $Obj_flow.level:=$Obj_flow.level-1               $Obj_flow.indent:=$Obj_flow.level                  //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{13};$Txt_line;1))  // End use               $Obj_flow.value:=$tTxt_controlFlow{13}               $Obj_flow.level:=$Obj_flow.level-1               $Obj_flow.indent:=$Obj_flow.level                  //……………………………………………………………            : (Match regex:C1019("(?m-si)^"+Command name:C538(949);$Txt_line;1))  // End SQL               $Obj_flow.value:=Command name:C538(949)               $Obj_flow.level:=$Obj_flow.level-1               $Obj_flow.indent:=$Obj_flow.level                  //……………………………………………………………            Else               $Obj_flow.indent:=$Obj_flow.level                  //……………………………………………………………         End case         $Txt_code:=$Txt_code+Insert string:C231($Txt_line;($kTxt_tab*$Obj_flow.indent);1)+"\r"      End for each         // Delete the last carriage return      $Txt_code:=Delete string:C232($Txt_code;Length:C16($Txt_code);1)      $0:=$Txt_code   End if
+%attributes = {"lang":"us"}
+   If (Length:C16($Txt_code)>0)
+
+      $Col_lines:=Split string:C1554($Txt_code;"\r";sk trim spaces:K86:2)
+
+      CLEAR VARIABLE:C89($Txt_code)
+
+      $Obj_flow:=New object:C1471(\
+      "value";"";\
+      "level";0;\
+      "indent";0)
+
+      For each ($Txt_line;$Col_lines)
+
+         $Txt_line:=Replace string:C233($Txt_line;"\t";"")
+
+         Case of
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{2};$Txt_line;1))  // Else
+
+            $Obj_flow.value:=$tTxt_controlFlow{2}
+            $Obj_flow.indent:=$Obj_flow.level-1
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{1}+"\\W";$Txt_line;1))  // If
+
+            $Obj_flow.value:=$tTxt_controlFlow{1}
+            $Obj_flow.indent:=$Obj_flow.level
+            $Obj_flow.level:=$Obj_flow.level+1
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{4}+"\\W*";$Txt_line;1))  // Case of
+
+            $Obj_flow.value:=$tTxt_controlFlow{4}
+            $Obj_flow.indent:=$Obj_flow.level
+            $Obj_flow.level:=$Obj_flow.level+1
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{14}+"\\W";$Txt_line;1))  // For each
+
+            $Obj_flow.value:=$tTxt_controlFlow{14}
+            $Obj_flow.indent:=$Obj_flow.level
+            $Obj_flow.level:=$Obj_flow.level+1
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{8}+"\\W";$Txt_line;1))  // For
+
+            $Obj_flow.value:=$tTxt_controlFlow{8}
+            $Obj_flow.indent:=$Obj_flow.level
+            $Obj_flow.level:=$Obj_flow.level+1
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{6}+"\\W";$Txt_line;1))  // While
+
+            $Obj_flow.value:=$tTxt_controlFlow{6}
+            $Obj_flow.indent:=$Obj_flow.level
+            $Obj_flow.level:=$Obj_flow.level+1
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{10}+"\\W";$Txt_line;1))  // Repeat
+
+            $Obj_flow.value:=$tTxt_controlFlow{10}
+            $Obj_flow.indent:=$Obj_flow.level
+            $Obj_flow.level:=$Obj_flow.level+1
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+Command name:C538(948);$Txt_line;1))  // Begin SQL
+
+            $Obj_flow.value:=Command name:C538(948)
+            $Obj_flow.indent:=$Obj_flow.level
+            $Obj_flow.level:=$Obj_flow.level+1
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{12}+"\\W";$Txt_line;1))  // Use
+
+            $Obj_flow.value:=$tTxt_controlFlow{12}
+            $Obj_flow.indent:=$Obj_flow.level
+            $Obj_flow.level:=$Obj_flow.level+1
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{3};$Txt_line;1))  // End if
+
+            $Obj_flow.value:=$tTxt_controlFlow{3}
+            $Obj_flow.level:=$Obj_flow.level-1
+            $Obj_flow.indent:=$Obj_flow.level
+
+               //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{5};$Txt_line;1))  // End case
+
+               If (Asserted:C1132($Lon_parameters>=1;"Missing parameter"))
+
+                  $Txt_code:=$1
+
+                  ARRAY TEXT:C222($tTxt_controlFlow;0x0000)
+                  localizedControlFlow ("";->$tTxt_controlFlow)
+
+                  $kTxt_tab:=Char:C90(Space:K15:42)*3
+
+               Else
+
+                  ABORT:C156
+
+               End if
+
+                  //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{15};$Txt_line;1))  // End for each
+
+               $Obj_flow.value:=$tTxt_controlFlow{15}
+               $Obj_flow.level:=$Obj_flow.level-1
+               $Obj_flow.indent:=$Obj_flow.level
+
+                  //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{9};$Txt_line;1))  // End for
+
+               $Obj_flow.value:=$tTxt_controlFlow{9}
+               $Obj_flow.level:=$Obj_flow.level-1
+               $Obj_flow.indent:=$Obj_flow.level
+
+                  //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{7};$Txt_line;1))  // End while
+
+               $Obj_flow.value:=$tTxt_controlFlow{7}
+               $Obj_flow.level:=$Obj_flow.level-1
+               $Obj_flow.indent:=$Obj_flow.level
+
+                  //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{11}+"\\W";$Txt_line;1))  // Until
+
+               $Obj_flow.value:=$tTxt_controlFlow{11}
+               $Obj_flow.level:=$Obj_flow.level-1
+               $Obj_flow.indent:=$Obj_flow.level
+
+                  //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+$tTxt_controlFlow{13};$Txt_line;1))  // End use
+
+               $Obj_flow.value:=$tTxt_controlFlow{13}
+               $Obj_flow.level:=$Obj_flow.level-1
+               $Obj_flow.indent:=$Obj_flow.level
+
+                  //……………………………………………………………
+            : (Match regex:C1019("(?m-si)^"+Command name:C538(949);$Txt_line;1))  // End SQL
+
+               $Obj_flow.value:=Command name:C538(949)
+               $Obj_flow.level:=$Obj_flow.level-1
+               $Obj_flow.indent:=$Obj_flow.level
+
+                  //……………………………………………………………
+            Else
+
+               $Obj_flow.indent:=$Obj_flow.level
+
+                  //……………………………………………………………
+         End case
+
+         $Txt_code:=$Txt_code+Insert string:C231($Txt_line;($kTxt_tab*$Obj_flow.indent);1)+"\r"
+
+      End for each
+
+         // Delete the last carriage return
+      $Txt_code:=Delete string:C232($Txt_code;Length:C16($Txt_code);1)
+
+      $0:=$Txt_code
+
+   End if

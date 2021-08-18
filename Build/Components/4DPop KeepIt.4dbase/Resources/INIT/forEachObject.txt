@@ -1,1 +1,4 @@
-﻿For each ($Obj_;$Col_)		End for each
+For each ($Obj_;$Col_)
+	
+	
+End for each

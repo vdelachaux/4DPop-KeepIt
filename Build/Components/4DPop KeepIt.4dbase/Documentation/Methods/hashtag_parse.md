@@ -1,1 +1,0 @@
-hashtag_parse ( entryPoint )   -> entryPoint (Text)  ________________________________________________________  

@@ -1,1 +1,1 @@
-﻿ASSERT(false;"Unknown entry point: \""+<caret/>+"\"")
+ASSERT(false;"Unknown entry point: \""+<caret/>+"\"")
