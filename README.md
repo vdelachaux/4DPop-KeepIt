@@ -6,4 +6,6 @@
 
 # 4DPop KeepIt
 
-[See a demo](https://vimeo.com/17368785)
+Watch a demo
+* [🇫🇷 Regardez une démonstration](https://vimeo.com/17368785)
+* [🇬🇧 View a demonstration](https://vimeo.com/17368771)
