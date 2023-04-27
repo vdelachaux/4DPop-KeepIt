@@ -1,7 +1,6 @@
 //%attributes = {"invisible":true}
 // PROCESS VARIABLES
 C_LONGINT:C283(Lon_error)
-C_LONGINT:C283(sql_error)
 C_POINTER:C301(Ptr_1)
 C_POINTER:C301(Ptr_2)
 

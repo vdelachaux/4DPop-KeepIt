@@ -35,7 +35,7 @@ If (Asserted:C1132($Lon_parameters>=0; "Missing parameter"))
 		
 	End if 
 	
-	keepit_update
+	//keepit_update
 	
 Else 
 	

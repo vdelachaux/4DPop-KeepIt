@@ -48,7 +48,7 @@ If (Size of array:C274(<>_o_constantName)=0)
 		ARRAY TEXT:C222($tDom_groups; 0x0000)
 		ARRAY TEXT:C222($tDom_units; 0x0000)
 		ARRAY TEXT:C222($tTxt_files; 0x0000)
-		EXECUTE METHOD:C1007("4DPop_applicationFolder"; $Txt_path; kLanguage)
+		//EXECUTE METHOD("4DPop_applicationFolder"; $Txt_path; kLanguage)
 		DOCUMENT LIST:C474($Txt_path; $tTxt_files)
 		$Lon_x:=Find in array:C230($tTxt_files; "4D_Constants@.xlf")
 		

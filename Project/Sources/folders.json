@@ -1,27 +1,28 @@
 {
-	"_0_TEST": {
-		"methods": [
-			"00_RUN",
-			"000_test"
-		]
-	},
-	"_o_compatibility": {
+	"_o_": {
+		"groups": [
+			"[HASHTAG]"
+		],
 		"methods": [
 			"_o_tag_command",
 			"_o_tag_constant",
 			"_o_tag_keyword",
-			"COMPILER_Compatibility"
+			"COMPILER_Compatibility",
+			"Hashtag_tool"
 		]
 	},
-	"_Public": {
-		"methods": [
-			"Hashtag_macro",
-			"Hashtag_tool",
-			"Keepit_MACRO",
-			"KeepIt_onDrop",
-			"KeepIt_tool"
+	"- #️⃣ API": {},
+	"-👥 NAMESPACE": {},
+	"(_0_TEST)": {},
+	"(_o_compatibility)": {},
+	"(_Public)": {},
+	"(Component)": {
+		"groups": [
+			"(_Public)"
 		]
 	},
+	"(Macros)": {},
+	"(Tools)": {},
 	"[HASHTAG]": {
 		"methods": [
 			"COMPILER_hashtag",
@@ -44,7 +45,7 @@
 			"keepit_folder",
 			"keepit_get_file",
 			"keepit_indent",
-			"keepit_main",
+			"keepit_list",
 			"keepit_method",
 			"keepit_session",
 			"keepit_update"
@@ -55,15 +56,41 @@
 			"KEEPIT"
 		]
 	},
-	"Component": {
+	"# 🚧 DEV": {
+		"methods": [
+			"000_test"
+		]
+	},
+	"♻️ LIBRAIRIES": {},
+	"⚙️ MACROS": {
+		"methods": [
+			"Hashtag_macro",
+			"Keepit_MACRO"
+		]
+	},
+	"📦 COMPONENT": {
 		"groups": [
-			"_Public",
-			"[HASHTAG]",
 			"[KEEPIT]"
 		],
 		"methods": [
-			"COMPILER_component",
-			"ON_HOST_DATABASE_EVENT"
+			"COMPILER_component"
+		]
+	},
+	"🛠️ Tools": {
+		"methods": [
+			"COMPILER_tools",
+			"localizedControlFlow",
+			"methodGetName",
+			"noError",
+			"ptrTable"
+		]
+	},
+	"4️⃣ 4DPop": {
+		"methods": [
+			"_4DPopKeepIt",
+			"COMPILER_4DPop",
+			"list",
+			"onDrop"
 		]
 	},
 	"doc": {
@@ -97,14 +124,13 @@
 			"Rgx_SubstituteText"
 		]
 	},
-	"Tools": {
-		"methods": [
-			"COMPILER_tools",
-			"localizedControlFlow",
-			"methodGetName",
-			"noError",
-			"ptrTable"
+	"trash": {
+		"groups": [
+			"(_0_TEST)",
+			"(_o_compatibility)",
+			"(Component)",
+			"(Macros)",
+			"(Tools)"
 		]
-	},
-	"trash": {}
+	}
 }

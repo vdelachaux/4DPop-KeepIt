@@ -59,7 +59,7 @@ Case of
 		If (Method called on error:C704=Current method name:C684)
 			
 			// ERROR MANAGEMENT
-			sql_error:=ERROR
+			//SQL_ERROR:=ERROR
 			
 		End if 
 		

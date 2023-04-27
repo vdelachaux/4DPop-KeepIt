@@ -24,7 +24,10 @@
       <HardLink></HardLink>
       <LastDataPathLookup>ByAppName</LastDataPathLookup>
       <AllowMacSiliconClient>False</AllowMacSiliconClient>
-      <CompiledDatabaseFolder></CompiledDatabaseFolder>
+      <CompiledDatabaseFolder/>
+      <MacCompiledDatabaseToWinIncludeIt>False</MacCompiledDatabaseToWinIncludeIt>
+      <MacCompiledDatabaseToWin></MacCompiledDatabaseToWin>
+      <ServerEmbedsProjectDirectoryFile>False</ServerEmbedsProjectDirectoryFile>
     </CS>
     <BuildApplicationName>4DPop KeepIt</BuildApplicationName>
     <BuildMacDestFolder>:Build:</BuildMacDestFolder>
@@ -44,12 +47,16 @@
       </ArrayLicenseMac>
     </Licenses>
     <SignApplication>
-      <MacSignature>False</MacSignature>
-      <MacCertificate></MacCertificate>
+      <MacSignature>True</MacSignature>
+      <MacCertificate>Vincent de Lachaux (DYRKW64QA9)</MacCertificate>
       <AdHocSign>True</AdHocSign></SignApplication>
     <RuntimeVL>
       <LastDataPathLookup>ByAppName</LastDataPathLookup>
     </RuntimeVL>
+    <ArrayExcludedModuleName>
+      <ItemsCount>0</ItemsCount>
+    </ArrayExcludedModuleName>
   </BuildApp>
+
 
 </Preferences4D>

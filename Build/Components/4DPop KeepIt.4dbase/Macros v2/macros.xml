@@ -25,7 +25,8 @@ vincent@de-lachaux.net
         <text><method>Keepit_macro("new")</method></text>
     </macro>
     
-    <macro name="-" in_menu="true" type_ahead="false"><text/></macro>
+    <!-- 
+<macro name="-" in_menu="true" type_ahead="false"><text/></macro>
     
     <macro name="hashtag…/#"
         in_menu="true"
@@ -42,5 +43,6 @@ vincent@de-lachaux.net
         version="2">
         <text><method>Hashtag_macro("save";"<method_path/>")</method></text>        
     </macro>
+ -->
     
 </macros>

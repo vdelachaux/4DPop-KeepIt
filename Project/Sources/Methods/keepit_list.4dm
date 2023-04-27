@@ -16,8 +16,8 @@ C_TEXT:C284($File_; $Mnu_bar; $Mnu_edit; $Mnu_file; $Txt_code; $Txt_entryPoint)
 C_TEXT:C284($Txt_name)
 
 If (False:C215)
-	C_BOOLEAN:C305(keepit_main; $0)
-	C_TEXT:C284(keepit_main; $1)
+	C_BOOLEAN:C305(keepit_list; $0)
+	C_TEXT:C284(keepit_list; $1)
 End if 
 
 // ----------------------------------------------------
@@ -83,23 +83,23 @@ Case of
 	: ($Txt_entryPoint="_run")
 		
 		// First launch of this method executed in a new process
-		keepit_main("_declarations")
+		keepit_list("_declarations")
 		
-		keepit_main("_init")
+		keepit_list("_init")
 		
 		$Win_main:=Open form window:C675("KEEPIT"; Plain form window:K39:10; Horizontally centered:K39:1; Vertically centered:K39:4; *)
 		
 		DIALOG:C40("KEEPIT")
 		CLOSE WINDOW:C154
 		
-		keepit_main("_deinit")
+		keepit_list("_deinit")
 		
 		//===========================================================================
 	: ($Txt_entryPoint="_declarations")
 		
 		COMPILER_component
 		
-		keepit_update
+		//keepit_update
 		
 		//===========================================================================
 	: ($Txt_entryPoint="_init")

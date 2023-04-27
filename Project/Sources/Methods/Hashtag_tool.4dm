@@ -1,4 +1,4 @@
-//%attributes = {"invisible":true,"shared":true}
+//%attributes = {}
 // ----------------------------------------------------
 // Project method : Hashtag.tool
 // Database: 4DPop KeepIt
