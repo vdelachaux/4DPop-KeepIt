@@ -7,4 +7,5 @@
 // Description
 // #4DPop entry point "On drop"
 // ----------------------------------------------------
+#DECLARE($data : Object)
 keepit_list("onDrop")
