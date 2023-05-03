@@ -13,9 +13,9 @@ C_LONGINT:C283($Lon_i; $Lon_parameters)
 C_TEXT:C284($Txt_buffer; $Txt_encoding; $Txt_path; $Txt_url; $Txt_volume)
 
 If (False:C215)
-	C_TEXT:C284(keepit_get_file; $0)
-	C_TEXT:C284(keepit_get_file; $1)
-	C_TEXT:C284(keepit_get_file; $2)
+	C_TEXT:C284(_o_keepit_get_file; $0)
+	C_TEXT:C284(_o_keepit_get_file; $1)
+	C_TEXT:C284(_o_keepit_get_file; $2)
 End if 
 
 // ----------------------------------------------------

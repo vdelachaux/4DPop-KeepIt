@@ -72,7 +72,7 @@ Case of
 		
 		If (Bool:C1537(OK))
 			
-			keepit(New object:C1471(\
+			_o_keepit(New object:C1471(\
 				"do"; "new"; \
 				"code"; $Txt_code; \
 				"name"; $Txt_name))

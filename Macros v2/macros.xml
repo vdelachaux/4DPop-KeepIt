@@ -15,14 +15,14 @@ vincent@de-lachaux.net
         type_ahead="true"
         type_ahead_text="$$"
         version="2">
-        <text><method>Keepit_macro</method></text>
+        <text><method>SNIPPET_MACROS</method></text>
     </macro>
     
     <macro name="New Snippet… "
         in_menu="true"
         type_ahead="false"
         version="2">
-        <text><method>Keepit_macro("new")</method></text>
+        <text><method>SNIPPET_MACROS("new")</method></text>
     </macro>
     
     <!-- 

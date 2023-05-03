@@ -28,7 +28,7 @@ If (Asserted:C1132($Lon_parameters>=0; "Missing parameter"))
 		
 	End if 
 	
-	$Dir_sharedSnippets:=keepit_folder
+	$Dir_sharedSnippets:=_o_keepit_folder
 	
 Else 
 	

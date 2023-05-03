@@ -4,6 +4,11 @@
 			"[HASHTAG]"
 		],
 		"methods": [
+			"_o_keepit",
+			"_o_keepit_folder",
+			"_o_keepit_get_file",
+			"_o_keepit_method",
+			"_o_methodGetName",
 			"_o_tag_command",
 			"_o_tag_constant",
 			"_o_tag_keyword",
@@ -11,8 +16,6 @@
 			"Hashtag_tool"
 		]
 	},
-	"- #️⃣ API": {},
-	"-👥 NAMESPACE": {},
 	"(_0_TEST)": {},
 	"(_o_compatibility)": {},
 	"(_Public)": {},
@@ -40,13 +43,9 @@
 			"menu"
 		],
 		"methods": [
-			"keepit",
 			"keepit_ask",
-			"keepit_folder",
-			"keepit_get_file",
 			"keepit_indent",
 			"keepit_list",
-			"keepit_method",
 			"keepit_session",
 			"keepit_update"
 		],
@@ -61,26 +60,34 @@
 			"000_test"
 		]
 	},
-	"♻️ LIBRAIRIES": {},
+	"#️⃣ API": {},
+	"♻️ LIBRAIRIES": {
+		"classes": [
+			"menu"
+		]
+	},
 	"⚙️ MACROS": {
 		"methods": [
 			"Hashtag_macro",
-			"Keepit_MACRO"
+			"SNIPPET_MACROS"
 		]
 	},
+	"👥 NAMESPACE": {},
 	"📦 COMPONENT": {
 		"groups": [
 			"[KEEPIT]"
 		],
 		"methods": [
 			"COMPILER_component"
+		],
+		"classes": [
+			"snippet"
 		]
 	},
 	"🛠️ Tools": {
 		"methods": [
 			"COMPILER_tools",
 			"localizedControlFlow",
-			"methodGetName",
 			"noError",
 			"ptrTable"
 		]

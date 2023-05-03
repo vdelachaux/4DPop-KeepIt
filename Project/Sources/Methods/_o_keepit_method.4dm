@@ -16,8 +16,8 @@ C_TEXT:C284($Txt_code; $Txt_methodName; $Txt_result)
 C_COLLECTION:C1488($Col_parametters)
 
 If (False:C215)
-	C_TEXT:C284(keepit_method; $0)
-	C_TEXT:C284(keepit_method; $1)
+	C_TEXT:C284(_o_keepit_method; $0)
+	C_TEXT:C284(_o_keepit_method; $1)
 End if 
 
 // ----------------------------------------------------

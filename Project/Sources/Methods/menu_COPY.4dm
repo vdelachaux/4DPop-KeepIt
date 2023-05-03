@@ -24,7 +24,7 @@ Case of
 		If (Form:C1466.current#Null:C1517)
 			
 			// Keep as text
-			SET TEXT TO PASTEBOARD:C523(keepit(New object:C1471("do"; "processing"; "code"; Form:C1466.current.code)).code)
+			SET TEXT TO PASTEBOARD:C523(_o_keepit(New object:C1471("do"; "processing"; "code"; Form:C1466.current.code)).code)
 			
 			// And keep as private data
 			TEXT TO BLOB:C554("<keepit name=\""+Form:C1466.current.name+"\"/>"; $Blb_data; UTF8 text without length:K22:17)

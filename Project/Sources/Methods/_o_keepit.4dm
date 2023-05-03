@@ -31,8 +31,8 @@ ARRAY TEXT:C222($tTxt_buffer; 0)
 ARRAY TEXT:C222($tTxt_parameters; 0)
 
 If (False:C215)
-	C_OBJECT:C1216(keepit; $0)
-	C_OBJECT:C1216(keepit; $1)
+	C_OBJECT:C1216(_o_keepit; $0)
+	C_OBJECT:C1216(_o_keepit; $1)
 End if 
 
 ARRAY TEXT:C222($tTxt_segments; 0x0000; 0x0000)
@@ -111,7 +111,7 @@ Case of
 		//}
 		
 		// Get the shared snippets {
-		$Obj_folder:=doc_Folder(keepit_folder)
+		$Obj_folder:=doc_Folder(_o_keepit_folder)
 		
 		If ($Obj_folder.exist)
 			
@@ -139,7 +139,7 @@ Case of
 		
 		$Mnu_main:=Create menu:C408
 		
-		$Obj_snippets:=keepit(New object:C1471(\
+		$Obj_snippets:=_o_keepit(New object:C1471(\
 			"do"; "list"; \
 			"filtered"; True:C214; \
 			"withSeparator"; True:C214))
@@ -193,7 +193,7 @@ Case of
 				"value"; $Txt_choice))
 			
 			// Put the result in the method editor
-			$Txt_code:=keepit(New object:C1471("do"; "processing"; "code"; Document to text:C1236($Obj_snippets.data[$Lon_index].nativePath))).code
+			$Txt_code:=_o_keepit(New object:C1471("do"; "processing"; "code"; Document to text:C1236($Obj_snippets.data[$Lon_index].nativePath))).code
 			
 			SET MACRO PARAMETER:C998(Highlighted method text:K5:18; $Txt_code)
 			
@@ -208,35 +208,22 @@ Case of
 		
 		$Obj_out.code:=$Obj_in.code
 		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<file/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<file/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<clipboard/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<var/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<keepit/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<date/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<time/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<method_name/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<method_path/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<method_type/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<database_name/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<uid/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<selection/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<method/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<method-attribute/>"; "code"; $Obj_out.code)).code
 		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<clipboard/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<var/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<keepit/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<date/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<time/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<method_name/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<method_path/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<method_type/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<database_name/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<uid/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<selection/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<method/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<method-attribute/>"; "code"; $Obj_out.code)).code
-		
-		$Obj_out.code:=keepit(New object:C1471("do"; "<ask/>"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "<ask/>"; "code"; $Obj_out.code)).code
 		
 		// Detokenization {
 		If (Length:C16($Obj_out.code)>0)
@@ -245,7 +232,7 @@ Case of
 			
 			If ($Col_code[0]="%attributes = @")
 				
-				$Obj_out.code:=keepit(New object:C1471("do"; "localization"; "code"; $Obj_out.code)).code
+				$Obj_out.code:=_o_keepit(New object:C1471("do"; "localization"; "code"; $Obj_out.code)).code
 				
 			Else 
 				
@@ -276,9 +263,9 @@ Case of
 		$Obj_out.code:=Replace string:C233($Obj_out.code; "<user_os/>"; Current system user:C484)
 		
 		// Treat loops  & conditions
-		$Obj_out.code:=keepit(New object:C1471("do"; "loops & conditions"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "loops & conditions"; "code"; $Obj_out.code)).code
 		
-		$Obj_out.code:=keepit(New object:C1471("do"; "cleanup"; "code"; $Obj_out.code)).code
+		$Obj_out.code:=_o_keepit(New object:C1471("do"; "cleanup"; "code"; $Obj_out.code)).code
 		
 		//______________________________________________________
 	: ($Obj_in.do="new")
@@ -303,7 +290,7 @@ Case of
 				
 				$File_target:=Object to path:C1548(New object:C1471(\
 					"name"; $Txt_name; \
-					"parentFolder"; keepit_folder; \
+					"parentFolder"; _o_keepit_folder; \
 					"extension"; ".txt"))
 				
 				If (Test path name:C476($File_target)=Is a document:K24:1)
@@ -467,7 +454,7 @@ Case of
 			
 			For ($Lon_i; 1; Size of array:C274($tTxt_segments); 1)
 				
-				$Txt_buffer:=keepit_method($tTxt_segments{$Lon_i}{1})
+				$Txt_buffer:=_o_keepit_method($tTxt_segments{$Lon_i}{1})
 				
 				$Txt_code:=Replace string:C233($Txt_code; $tTxt_segments{$Lon_i}{0}; $Txt_buffer)
 				
@@ -483,7 +470,7 @@ Case of
 		
 		If (Position:C15("<method-attribute"; $Txt_code)>0)
 			
-			$Txt_methodPath:=Split string:C1554(methodGetName; ":"; sk trim spaces:K86:2)[1]
+			$Txt_methodPath:=Split string:C1554(_o_methodGetName; ":"; sk trim spaces:K86:2)[1]
 			
 			ON ERR CALL:C155("noError")
 			
@@ -558,7 +545,7 @@ Case of
 		
 		If (Position:C15($Obj_in.do; $Txt_code)>0)
 			
-			$Txt_buffer:=methodGetName
+			$Txt_buffer:=_o_methodGetName
 			
 			$Lon_x:=Position:C15(":"; $Txt_buffer)
 			
@@ -648,7 +635,7 @@ Case of
 		
 		If (Position:C15($Obj_in.do; $Txt_code)>0)
 			
-			$Txt_buffer:=methodGetName
+			$Txt_buffer:=_o_methodGetName
 			
 			$Lon_x:=Position:C15(":"; $Txt_buffer)
 			
@@ -844,7 +831,7 @@ Case of
 		
 		If (Position:C15($Obj_in.do; $Txt_code)>0)
 			
-			$Txt_buffer:=methodGetName
+			$Txt_buffer:=_o_methodGetName
 			
 			$Txt_code:=Replace string:C233($Txt_code; $Obj_in.do; Delete string:C232($Txt_buffer; 1; Position:C15(":"; $Txt_buffer)+1))
 			
@@ -970,7 +957,7 @@ Case of
 		
 		$Txt_code:=$Obj_in.code
 		
-		$Obj_snippets:=keepit(New object:C1471(\
+		$Obj_snippets:=_o_keepit(New object:C1471(\
 			"do"; "list"))
 		
 		If ($Obj_snippets.success)
@@ -985,7 +972,7 @@ Case of
 					
 					If ($Col_snippets.length>0)
 						
-						$Txt_buffer:=keepit(New object:C1471("do"; "processing"; "code"; Document to text:C1236($Col_snippets[0].nativePath))).code
+						$Txt_buffer:=_o_keepit(New object:C1471("do"; "processing"; "code"; Document to text:C1236($Col_snippets[0].nativePath))).code
 						
 						$Txt_code:=Replace string:C233($Txt_code; $tTxt_segments{$Lon_i}{0}; $Txt_buffer; 1)
 						
@@ -1108,7 +1095,7 @@ Case of
 					
 				End if 
 				
-				$Txt_buffer:=keepit_get_file($Txt_url; $Txt_encoding)
+				$Txt_buffer:=_o_keepit_get_file($Txt_url; $Txt_encoding)
 				$Txt_buffer:=$Txt_buffer+("•keepit ERROR•"*Num:C11(Length:C16($Txt_buffer)=0))
 				
 				$Txt_code:=Replace string:C233($Txt_code; $tTxt_segments{$Lon_i}{0}; $Txt_buffer; 1)

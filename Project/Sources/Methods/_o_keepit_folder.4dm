@@ -16,7 +16,7 @@ C_LONGINT:C283($Lon_parameters)
 C_TEXT:C284($Dir_snippetFolder; $File_alias; $Txt_buffer)
 
 If (False:C215)
-	C_TEXT:C284(keepit_folder; $0)
+	C_TEXT:C284(_o_keepit_folder; $0)
 End if 
 
 // ----------------------------------------------------

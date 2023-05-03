@@ -9,54 +9,28 @@
 // Display a contextual menu of keepIt items
 // If an item is selected the code is pasted in the method editor
 // ----------------------------------------------------
-// Declarations
-C_TEXT:C284($1)
-
-C_LONGINT:C283($Lon_parameters)
-C_TEXT:C284($Txt_action)
+#DECLARE($action : Text)
 
 If (False:C215)
-	C_TEXT:C284(Keepit_MACRO; $1)
+	C_TEXT:C284(SNIPPET_MACROS; $1)
 End if 
 
-// ----------------------------------------------------
-// Initialisations
-$Lon_parameters:=Count parameters:C259
+COMPILER_component
 
-If (Asserted:C1132($Lon_parameters>=0; "Missing parameter"))
-	
-	// NO REQUIRED PARAMETER
-	
-	// COMPILER_component
-	
-	If ($Lon_parameters>=1)
-		
-		$Txt_action:=$1
-		
-	End if 
-	
-	//keepit_update
-	
-Else 
-	
-	ABORT:C156
-	
-End if 
-
-// ----------------------------------------------------
 Case of 
 		
 		//______________________________________________________
-	: ($Txt_action="new")  // Add a new snippet from the code selection
+	: ($action="new")
 		
-		keepit(New object:C1471(\
+		// Add a new snippet from the code selection
+		_o_keepit(New object:C1471(\
 			"do"; "new"))
 		
 		//______________________________________________________
-	Else   // Display the snippets menu
+	Else 
 		
-		keepit(New object:C1471(\
-			"do"; "menu"))
+		// Display the snippets menu
+		snippet.doMenu()
 		
 		//______________________________________________________
 End case 

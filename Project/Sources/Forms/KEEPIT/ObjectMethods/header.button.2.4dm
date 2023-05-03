@@ -46,7 +46,7 @@ Case of
 		
 		If (Length:C16($Txt_choice)>0)
 			
-			Form:C1466.current.code:=keepit(New object:C1471("do"; $Txt_choice; "code"; Form:C1466.current.code)).code
+			Form:C1466.current.code:=_o_keepit(New object:C1471("do"; $Txt_choice; "code"; Form:C1466.current.code)).code
 			Form:C1466.save()
 			
 		End if 

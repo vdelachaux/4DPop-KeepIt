@@ -102,7 +102,7 @@ Case of
 					//…………………………………………………………………………
 				: ($Mnu_choice="tokenize")
 					
-					Form:C1466.current.code:=keepit(New object:C1471("do"; "tokenize"; "code"; Form:C1466.current.code)).code
+					Form:C1466.current.code:=_o_keepit(New object:C1471("do"; "tokenize"; "code"; Form:C1466.current.code)).code
 					Form:C1466.save()
 					
 					SET TIMER:C645(-1)
@@ -110,7 +110,7 @@ Case of
 					//…………………………………………………………………………
 				: ($Mnu_choice="indent")
 					
-					Form:C1466.current.code:=keepit(New object:C1471("do"; "indent"; "code"; Form:C1466.current.code)).code
+					Form:C1466.current.code:=_o_keepit(New object:C1471("do"; "indent"; "code"; Form:C1466.current.code)).code
 					Form:C1466.save()
 					
 					SET TIMER:C645(-1)
@@ -214,7 +214,7 @@ Case of
 			Else 
 				
 				// Put as text in the pasteboard
-				SET TEXT TO PASTEBOARD:C523(keepit(New object:C1471(\
+				SET TEXT TO PASTEBOARD:C523(_o_keepit(New object:C1471(\
 					"do"; "processing"; \
 					"code"; Form:C1466.current.code)).code)
 				

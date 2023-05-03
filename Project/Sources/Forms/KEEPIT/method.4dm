@@ -33,7 +33,7 @@ If (Form:C1466.definition=Null:C1517)
 	Form:C1466.save:=Formula:C1597(TEXT TO DOCUMENT:C1237(This:C1470.current.nativePath; This:C1470.current.code))
 	Form:C1466.ask:=Formula:C1597(keepit_ask)
 	Form:C1466.parameters:=Formula:C1597(keepit_session)
-	Form:C1466.list:=Formula:C1597(keepit(New object:C1471("do"; "list")).data)
+	Form:C1466.list:=Formula:C1597(_o_keepit(New object:C1471("do"; "list")).data)
 	
 End if 
 

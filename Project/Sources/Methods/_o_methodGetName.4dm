@@ -17,8 +17,8 @@ C_LONGINT:C283($Lon_; $Lon_parameters; $Lon_x)
 C_TEXT:C284($Txt_buffer)
 
 If (False:C215)
-	C_TEXT:C284(methodGetName; $0)
-	C_BOOLEAN:C305(methodGetName; $1)
+	C_TEXT:C284(_o_methodGetName; $0)
+	C_BOOLEAN:C305(_o_methodGetName; $1)
 End if 
 
 // ----------------------------------------------------
