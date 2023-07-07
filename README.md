@@ -3,6 +3,8 @@
 ![code-size](https://img.shields.io/github/languages/code-size/vdelachaux/4DPop-KeepIt.svg)
 [![license](https://img.shields.io/github/license/vdelachaux/4DPop-KeepIt)](LICENSE)
 [![release](https://img.shields.io/github/v/release/vdelachaux/4DPop-KeepIt?include_prereleases)](https://github.com/vdelachaux/4DPop-KeepIt/releases/latest)
+[![Build](https://github.com/vdelachaux/4DPop-KeepIt/actions/workflows/build.yml/badge.svg)](https://github.com/vdelachaux/4DPop-KeepIt/actions/workflows/build.yml)
+
 
 # 4DPop KeepIt
 
