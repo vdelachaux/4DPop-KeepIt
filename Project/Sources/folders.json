@@ -95,7 +95,6 @@
 	"4️⃣ 4DPop": {
 		"methods": [
 			"_4DPopKeepIt",
-			"COMPILER_4DPop",
 			"list",
 			"onDrop"
 		]
