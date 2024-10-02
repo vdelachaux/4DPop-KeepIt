@@ -16,16 +16,6 @@
 			"Hashtag_tool"
 		]
 	},
-	"(_0_TEST)": {},
-	"(_o_compatibility)": {},
-	"(_Public)": {},
-	"(Component)": {
-		"groups": [
-			"(_Public)"
-		]
-	},
-	"(Macros)": {},
-	"(Tools)": {},
 	"[HASHTAG]": {
 		"methods": [
 			"COMPILER_hashtag",
@@ -130,13 +120,5 @@
 			"Rgx_SubstituteText"
 		]
 	},
-	"trash": {
-		"groups": [
-			"(_0_TEST)",
-			"(_o_compatibility)",
-			"(Component)",
-			"(Macros)",
-			"(Tools)"
-		]
-	}
+	"trash": {}
 }
